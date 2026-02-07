@@ -1,0 +1,151 @@
+:root {
+  --dark: #001a2c;
+  --card: #f5faff;
+  --light: #e1ecf7;
+  --text: #1d2630;
+}
+
+.hwrap { max-width: 1100px; 
+  margin: 40px auto; 
+  padding: 0 16px; 
+}
+.htitle { 
+  color: var(--navy); 
+  font-weight: 800; 
+  text-align:center; 
+  margin-bottom: 10px; 
+  margin-top: 20px;}
+.hdivider {
+  width: 180px; 
+  height: 10px; 
+  margin: 12px auto 28px; 
+  background: var(--line);
+  border-radius: 999px;
+}
+.leaders-grid { 
+  display: grid; 
+  grid-template-columns: 
+  repeat(auto-fit,minmax(180px,1fr)); 
+  gap: 16px; 
+}
+.leader-card {
+border-radius: 12px;
+overflow: hidden;
+background: #f5faff;
+border: 1px solid #e8eef6;
+text-align: center;
+box-shadow: 0 6px 18px #0000001e;
+}
+
+.leader-card .img-container {
+  position: relative;
+  width: 100%;
+  height: 180px;
+}
+
+.leader-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.leader-card .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #00000087; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  font-size: 1rem;
+}
+.leader-card .overlay p {
+  color: white !important; 
+}
+
+.leader-card .img-container:hover .overlay {
+  opacity: 1;
+}
+
+.leader-card h6 {
+  font-weight: 800;
+  margin: 10px 0 4px;
+  color: var(--navy);
+}
+
+.leader-card p {
+  font-size: .95rem;
+  margin: 0 10px 12px;
+  color: #456;
+}
+
+.comp-item { max-width: 900px; 
+  margin: 26px auto; 
+  text-align:center; 
+}
+.comp-img {
+  width: 100%; 
+  max-width: 820px; 
+  height: 360px; 
+  object-fit: cover; 
+  border-radius: 14px;
+  box-shadow: 0 10px 24px #0000001e;
+}
+.comp-title { 
+  font-weight: 800; 
+  color: var(--navy); 
+  margin-top: 12px; 
+}
+.comp-desc { 
+  color:#456; 
+  margin-bottom: 8px; 
+}
+.leadpic {
+  width: 100%; 
+  max-width: 620px;  
+  object-fit: cover; 
+  border-radius: 2px;
+  box-shadow: 0 10px 24px #0000001e;
+}
+
+.video-wrap{
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.video-title{
+  font-weight: 800;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  margin-bottom: 14px;
+  color: #001a2c;
+}
+
+.video-frame{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px #0000001e;
+  background: #000000;
+}
+
+.video-el{
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 576px){
+  .video-wrap{ 
+    margin: 28px auto; 
+  }
+}

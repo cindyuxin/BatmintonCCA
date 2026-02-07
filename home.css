@@ -1,0 +1,247 @@
+:root {
+  --dark: #001a2c;
+  --card: #f5faff;
+  --light: #e1ecf7;
+  --text: #1d2630;
+}
+
+
+.strip { 
+  width: 100%; 
+  display: flex; 
+  justify-content: center; 
+}
+.strip--heading { 
+  display: flex;
+  justify-content: center; 
+  padding: 20px 0 0; 
+  margin-top: 10px; 
+}
+.strip--heading h1 {
+  width: 100%; 
+  max-width: 1240px; 
+  margin: 0;
+  font-size: 3rem; 
+  font-weight: 700; 
+  color: var(--dark); 
+  text-align: center;
+}
+.strip--sub { 
+  padding: 12px 0; 
+}
+.strip--sub .strip-narrow {
+  margin: 100px auto 0; 
+  padding: 0; 
+  color: var(--dark);
+  font-weight: 700; 
+  font-size: 3rem; 
+  text-align: center;
+}
+
+
+.hdivider {
+  width: 80%;
+  max-width: 500px; 
+  height: 10px;
+  margin: 12px auto 28px; 
+  background: #001a2c61; 
+  border-radius: 999px;
+}
+
+
+.page .hero { 
+  padding: 18px 0 8px; 
+}
+
+.banner {
+  position: relative; 
+  width: 100%; 
+  max-width: 1240px;
+  margin: 0 auto; 
+  overflow: hidden;
+}
+.banner-slider { 
+  display: flex; 
+  transition: transform .5s ease-in-out; }
+.banner-slide { 
+  position: relative; 
+  flex: 0 0 100%; }
+.banner-slide img {
+  width: 100%; 
+  height: 420px; 
+  object-fit: cover; 
+  border-radius: 6px; 
+  background: #e6e6e9;
+}
+.banner-text {
+  position: absolute; 
+  left: 50%; 
+  transform: translateX(-50%);
+  bottom: 20px; 
+  background: #1d263071; 
+  color: #fff;
+  padding: 10px 20px; 
+  border-radius: 6px; 
+  font-size: 1.1rem; 
+  text-align: center;
+}
+
+.banner-arrow {
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%);
+  font-size: 2.2rem; 
+  color: #fff; 
+  background: #0000003e;
+  border: 0; 
+  cursor: pointer; 
+  z-index: 1; 
+  padding: 8px 12px; 
+  line-height: 1;
+}
+.banner-arrow:hover { 
+  background: #0000007c; 
+}
+.banner-arrow.left  { 
+  left: 16px; 
+}
+.banner-arrow.right { 
+  right: 16px; 
+}
+
+.lookinto { 
+  padding: 6px 0 12px; 
+}
+.cards3 {
+  max-width: 1180px;
+  margin: 0 auto; 
+  padding: 0 16px;
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 24px;
+}
+.hl-card {
+  background: var(--card); 
+  border: 1px solid #e3e8ef; 
+  border-radius: 14px;
+  padding: 26px 22px; 
+  text-align: center;
+  box-shadow: 0 4px 12px #00000022;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.hl-card:hover { 
+  transform: translateY(-4px); 
+  box-shadow: 0 10px 24px #00000022; 
+}
+.hl-icon  { 
+  font-size: 1.6rem; 
+  margin-bottom: 8px; 
+}
+.hl-title { 
+  font-size: 2rem; 
+  font-weight: 800; 
+  margin: 10px 0 16px; 
+}
+.hl-list  { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0 0 10px; 
+  display: grid; 
+  gap: 10px; 
+  font-size: 1.2rem; 
+}
+
+
+.readmore { 
+  background: none; 
+  border: 0; 
+  color: #3a6fb7; 
+  font-weight: 700; 
+  cursor: pointer; 
+  margin-top: 10px; 
+}
+.more { 
+  max-height: 0; 
+  overflow: hidden; 
+  transition: max-height .25s ease; 
+  margin: 8px auto 0; 
+  max-width: 520px; 
+  color: #444; 
+}
+
+.more.open { 
+  max-height: 140px; 
+}
+
+
+.cta-tiles {
+  max-width: 1180px; 
+  margin: 10px auto 24px; 
+  padding: 0 16px;
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 42px; 
+  text-align: center;
+}
+.info-card { 
+  background: transparent;
+}
+.pill-btn {
+  display: inline-block; margin-top: 6px; padding: 24px 38px;
+  border-radius: 40px; background: #bfbfc4; color: #fff;
+  text-decoration: none; font-weight: 700; transition: filter .2s, box-shadow .2s;
+}
+.pill-btn:hover { 
+  filter: brightness(1.08); 
+  box-shadow: 0 4px 12px #00000022; 
+}
+
+
+.insta {
+  max-width: 900px; 
+  margin: 22px auto 56px; 
+  padding: 0 16px; 
+}
+.insta-frame { 
+  max-width: 900px;
+  margin: 0 auto; 
+  background: #e6e7ea; 
+  border: 1px solid #ddd; 
+}
+.insta-frame iframe { 
+  width: 100%; 
+  height: 100%; 
+  border: 0; 
+  border-radius: 6px; 
+}
+
+
+@media (max-width: 992px){
+  .strip--heading h1 { 
+    font-size: 2.4rem; 
+  }
+  .cards3 { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .cta-tiles { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 28px; 
+  }
+}
+
+@media (max-width: 576px){
+  .banner-slide img { 
+    height: 300px; 
+  
+  }
+  .strip--heading h1 { 
+    font-size: 1.9rem; 
+  }
+  .cards3, .cta-tiles { 
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+  }
+  .pill-btn {
+     width: 78%; 
+  }
+}

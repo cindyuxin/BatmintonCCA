@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Join Badminton CCA</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="form.css">
+  
+
+  
+</head>
+<body>
+
+  <div class="formwrapp">
+    <h2>Join NYP Badminton</h2>
+    <form id="badmintonform2">
+
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="name" name="name" required placeholder="e.g. Jane Doe">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Gender</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required>
+          <label class="form-check-label" for="female">Female</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
+          <label class="form-check-label" for="male">Male</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="admin" class="form-label">Admin Number</label>
+        <input type="text" class="form-control" id="admin" name="admin" required placeholder="e.g. 251234A">
+      </div>
+
+      <div class="mb-3">
+        <label for="school" class="form-label">Select School</label>
+        <select class="form-select" id="school" name="school" required>
+          <option value="">==Choose School==</option>
+          <option value="sit">School of Infomation Technology</option>
+          <option value="sas">School of Applied Science</option>
+          <option value="sbm">School of Business Management</option>
+          <option value="sdm">School of Design & Media</option>
+          <option value="seg">School of Engineering</option>
+          <option value="shss">School of Health & Social Sciences</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" required placeholder="you@email.com">
+      </div>
+
+      <div class="mb-3">
+        <label for="contact" class="form-label">Contact Number</label>
+        <input type="tel" class="form-control" id="contact" name="contact" required pattern="\d{8}" placeholder="e.g. 67676969">
+      </div>
+
+      <div class="mb-3">
+        <label for="interest" class="form-label">Why are you interested to join Badminton CCA?</label>
+        <textarea class="form-control" id="interest" name="interest" rows="3" required placeholder="e.g. I love playing badminton.."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+  </div>
+<script>
+  document.getElementById("badmintonform2").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const formData = {
+      name: form.name.value,
+      gender: form.gender.value,
+      admin: form.admin.value,
+      school: form.school.value,
+      email: form.email.value,
+      number: form.contact.value,
+      reason: form.interest.value
+    };
+
+    localStorage.setItem("badmintonform2", JSON.stringify(formData));
+    window.location.href = "formend.html";
+  });
+</script>
+
+</body>
+</html>

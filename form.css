@@ -1,0 +1,80 @@
+body {
+  background-color: #e1ecf7;
+  font-family: 'Rokkitt', serif;
+  color: #001a2c;
+  padding: 40px;
+}
+
+.formwrapp {
+  max-width: 500px;
+  background: white;
+  padding: 30px 40px;
+  margin: 60px auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px #001a2c10;
+  color: #001a2c;
+}
+
+.formwrapp h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #001a2c;
+}
+
+.formwrapp .form-label {
+  font-weight: 600;
+  color: #001a2c;
+}
+
+.formwrapp input,
+.formwrapp select,
+.formwrapp textarea {
+  border: 1px solid #aac7e6;
+  background-color: #f5f9ff;
+  color: #001a2c;
+}
+
+.formwrapp input::placeholder,
+.formwrapp textarea::placeholder {
+  color: #7a90a4;
+}
+
+.formwrapp .btn-primary {
+  width: 100%;
+  font-weight: bold;
+  border-radius: 50px;
+  background-color: #001a2c;
+  border-color: #001a2c;
+  transition: background-color 0.3s;
+}
+
+.formwrapp .btn-primary:hover {
+  background-color: #003457;
+  border-color: #003457;
+}
+
+.formwrapp textarea {
+  resize: none;
+}
+
+.confirmbox {
+  background: white;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px #00000012;
+}
+
+.confirmbox h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.confirmbox p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
